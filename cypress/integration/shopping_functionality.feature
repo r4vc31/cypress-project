@@ -21,8 +21,8 @@ Feature: Shopping Functionality on DemoBlaze
     Then I select a product
     When I add the product to the cart
     And I move to the product page
-    Then the cart page is displayed
-    And the cart contains a product
+    And the cart page is displayed
+    Then the cart contains a product
 
   @cart-interactions @regression
   Scenario: User removes an item from the cart
@@ -30,9 +30,20 @@ Feature: Shopping Functionality on DemoBlaze
     And I select the "Phones" category
     Then I select a random product
     And I add the product to the cart
-    When I move to the product page
+    And I move to the product page
     And I remove the added product
     Then the cart is empty
 
+  @checkout @regression
+  Scenario: User completes a purchase
+    Given I visit the DemoBlaze website
+    And I select the "Monitors" category
+    Then I select a random product
+    And I add the product to the cart
+    And I move to the product page
+    When I proceed to checkout
+    And I enter the order info
+    And I confirm the order
+    Then the order is successfully placed
 
 

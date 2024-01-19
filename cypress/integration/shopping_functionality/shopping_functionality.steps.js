@@ -3,6 +3,7 @@ import BasePage from '../../support/pages/base_page';
 import HomePage from '../../support/pages/home_page';
 import ProductPage from '../../support/pages/product_page';
 import CartPage from '../../support/pages/cart_page';
+import CheckoutPage from '../../support/pages/checkout_page';
 
 const productName = 'Sony vaio i5';
 
@@ -47,7 +48,7 @@ Then('the cart page is displayed', () => {
     cy.location('pathname').should('eq', '/cart.html'); // Validate URL for Cart
 });
 
-And('the cart contains a product', () => {
+Then('the cart contains a product', () => {
     const cartProducts = CartPage.cartProducts.should('be.visible');
     cartProducts.its('length').should('be.gt', 0);
 });
@@ -59,4 +60,21 @@ And('I remove the added product', () => {
 
 Then('the cart is empty', () => {
     CartPage.cartProducts.should('not.exist'); // Check for absence of cart items
+});
+
+
+When('I proceed to checkout', () => {
+    CartPage.proceedToCheckout(); // Use Page Object method
+});
+
+And('I enter the order info', () => {
+    CheckoutPage.fillOrderInfo("Ronad", "Ecuador", "Gye", "012456789", "January", "2024");
+});
+
+And('I confirm the order', () => {
+    CheckoutPage.confirmOrder();
+});
+
+Then('the order is successfully placed', () => {
+    cy.contains("h2", "Thank you for your purchase!").should("be.visible");
 });
