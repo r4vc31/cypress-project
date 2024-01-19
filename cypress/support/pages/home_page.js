@@ -31,6 +31,15 @@ class HomePage {
       cy.contains(productName).click();
     }
 
+    selectRandomProduct(){
+      cy.get('#tbodyid > div').then(($elements) => {
+        const randomIndex = Math.floor(Math.random() * $elements.length);
+        const randomElement = $elements.get(randomIndex);
+        cy.wrap(randomElement).click();
+      });
+      
+    }
+
   }
   
   export default new HomePage();

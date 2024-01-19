@@ -23,6 +23,11 @@ When('I select a product', () => {
     HomePage.selectProduct(productName);
 });
 
+When('I select a random product', () => {
+    // Use Page Object method with specific selector for chosen product
+    HomePage.selectProduct(productName);
+});
+
 Then('the product details page is displayed', () => {
     cy.get('h2').should('contain', productName);
     cy.get('.price-container').should('be.visible');
@@ -34,7 +39,7 @@ When('I add the product to the cart', () => {
     ProductPage.addToCart(); // Use Page Object method
 });
 
-And('I move to the product page', ()=>{
+And('I move to the product page', () => {
     BasePage.getHeaderLinkOption("Cart").click();
 });
 
@@ -45,4 +50,13 @@ Then('the cart page is displayed', () => {
 And('the cart contains a product', () => {
     const cartProducts = CartPage.cartProducts.should('be.visible');
     cartProducts.its('length').should('be.gt', 0);
+});
+
+
+And('I remove the added product', () => {
+    CartPage.removeFirstProduct(); // Use Page Object method
+});
+
+Then('the cart is empty', () => {
+    CartPage.cartProducts.should('not.exist'); // Check for absence of cart items
 });
