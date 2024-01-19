@@ -7,6 +7,10 @@ class HomePage {
       return cy.get('.carousel');
     }
 
+    get category_list() {
+      return cy.get('.list-group a:not(:first-child)');
+    }
+
     clickPreviousCarouselButton() {
         this.carousel.find('.carousel-control-prev').click();
       }
@@ -20,7 +24,8 @@ class HomePage {
     }
 
     selectCategory(categoryName) {
-      cy.get('.category-list').contains(categoryName).click();
+
+      this.category_list.contains(categoryName).click();
     }
 
   }

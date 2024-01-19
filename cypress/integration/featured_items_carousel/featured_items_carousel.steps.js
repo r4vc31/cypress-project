@@ -1,8 +1,9 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
+import BasePage from '../../support/pages/base_page';
 import HomePage from '../../support/pages/home_page';
 
 Given('I am on the home page', () => {
-  HomePage.visit();
+  BasePage.visit();
 });
 
 When('I click the next carousel button', () => {
