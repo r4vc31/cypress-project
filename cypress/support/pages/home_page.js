@@ -24,8 +24,11 @@ class HomePage {
     }
 
     selectCategory(categoryName) {
-
       this.category_list.contains(categoryName).click();
+    }
+
+    selectProduct(productName){
+      cy.contains(productName).click();
     }
 
   }
