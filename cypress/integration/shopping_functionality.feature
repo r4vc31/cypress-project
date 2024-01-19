@@ -14,6 +14,16 @@ Feature: Shopping Functionality on DemoBlaze
     When I select a product
     Then the product details page is displayed
 
+ @cart-interactions @regression
+ Scenario: User adds a product to the cart and verifies cart contents
+    Given I visit the DemoBlaze website
+    And I select the "Laptops" category
+    Then I select a product
+    When I add the product to the cart
+    And I move to the product page
+    Then the cart page is displayed
+    And the cart contains a product
+
     
 
 

@@ -1,6 +1,8 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 import BasePage from '../../support/pages/base_page';
 import HomePage from '../../support/pages/home_page';
+import ProductPage from '../../support/pages/product_page';
+import CartPage from '../../support/pages/cart_page';
 
 const productName = 'Sony vaio i5';
 
@@ -27,8 +29,20 @@ Then('the product details page is displayed', () => {
     cy.get('.description').should('be.visible');
 });
 
-And('I can add the product to the cart', () => {
+
+When('I add the product to the cart', () => {
     ProductPage.addToCart(); // Use Page Object method
-    cy.get('.cart-count').should('contain', 1); // Verify cart item count
 });
 
+And('I move to the product page', ()=>{
+    BasePage.getHeaderLinkOption("Cart").click();
+});
+
+Then('the cart page is displayed', () => {
+    cy.location('pathname').should('eq', '/cart.html'); // Validate URL for Cart
+});
+
+And('the cart contains a product', () => {
+    const cartProducts = CartPage.cartProducts.should('be.visible');
+    cartProducts.its('length').should('be.gt', 0);
+});

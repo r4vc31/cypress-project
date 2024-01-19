@@ -4,6 +4,10 @@ class BasePage {
         cy.visit('/');
     }
 
+    getHeaderLinkOption(optionName){
+        return cy.contains('a', optionName);
+    }
+
     get homeLink() {
         return cy.contains('a', 'Home');
     }
