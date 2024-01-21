@@ -1,35 +1,15 @@
 class BasePage {
 
     visit() {
+        cy.request('GET', 'https://demoblaze.com')
+            .then((response) => {
+                expect(response.status).to.eq(200);
+            });
         cy.visit('/');
     }
 
-    getHeaderLinkOption(optionName){
-        return cy.contains('a', optionName);
-    }
-
-    get homeLink() {
-        return cy.contains('a', 'Home');
-    }
-
-    get aboutUsLink() {
-        return cy.contains('a', 'About us');
-    }
-
-    get contactUsLink() {
-        return cy.contains('a', 'Contact');
-    }
-
-    clickHomeLink() {
-        this.homeLink.click();
-    }
-
-    clickAboutUsLink() {
-        this.aboutUsLink.click();
-    }
-
-    clickContactUsLink() {
-        this.contactUsLink.click();
+    getHeaderLink(optionName) {
+        return cy.contains('a.nav-link', optionName);
     }
 
 }

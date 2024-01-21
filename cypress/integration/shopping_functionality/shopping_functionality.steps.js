@@ -4,6 +4,8 @@ import HomePage from '../../support/pages/home_page';
 import ProductPage from '../../support/pages/product_page';
 import CartPage from '../../support/pages/cart_page';
 import CheckoutPage from '../../support/pages/checkout_page';
+import home_page from '../../support/pages/home_page';
+import { } from '../header_navigation/header_navigation.steps';
 
 const productName = 'Sony vaio i5';
 
@@ -12,50 +14,54 @@ Given('I visit the DemoBlaze website', () => {
 });
 
 When('I select the {string} category', (categoryName) => {
+
     HomePage.selectCategory(categoryName);
+    cy.wait(2500);
+
 });
 
-Then('the product {string} is displayed', (productName) => {
-    cy.get('h4').should('contain', productName);
+When('I select a random category', () => {
+    HomePage.selectRandomCategory();
+    cy.wait(2500);
 });
 
-When('I select a product', () => {
-    // Use Page Object method with specific selector for chosen product
+Then('the product list is displayed', () => {
+    const product_list = HomePage.product_list;
+    product_list.should("be.visible");
+    product_list.its('length').should('be.gt', 0);
+});
+
+And('the product {string} is present', (productName) => {
+    home_page.getProductTitle(productName).should("be.visible");
+});
+
+And('I select the {string} product', (productName) => {
     HomePage.selectProduct(productName);
 });
 
-When('I select a random product', () => {
-    // Use Page Object method with specific selector for chosen product
-    HomePage.selectProduct(productName);
+And('I select a random product', () => {
+    HomePage.selectRandomProduct();
 });
 
-Then('the product details page is displayed', () => {
-    cy.get('h2').should('contain', productName);
-    cy.get('.price-container').should('be.visible');
-    cy.get('.description').should('be.visible');
+Then('the product page is displayed', () => {
+    ProductPage.productTitle.should("be.visible");
+    ProductPage.productPrice.should('be.visible');
+    ProductPage.productDescription.should('be.visible');
 });
 
 
-When('I add the product to the cart', () => {
-    ProductPage.addToCart(); // Use Page Object method
+And('I add the product to the cart', () => {
+    ProductPage.addToCart();
 });
 
-And('I move to the product page', () => {
-    BasePage.getHeaderLinkOption("Cart").click();
-});
-
-Then('the cart page is displayed', () => {
-    cy.location('pathname').should('eq', '/cart.html'); // Validate URL for Cart
-});
 
 Then('the cart contains a product', () => {
-    const cartProducts = CartPage.cartProducts.should('be.visible');
-    cartProducts.its('length').should('be.gt', 0);
+    CartPage.cartProducts.should('be.visible').its('length').should('be.gt', 0);
 });
 
 
 And('I remove the added product', () => {
-    CartPage.removeFirstProduct(); // Use Page Object method
+    CartPage.removeFirstProduct();
 });
 
 Then('the cart is empty', () => {
@@ -64,11 +70,13 @@ Then('the cart is empty', () => {
 
 
 When('I proceed to checkout', () => {
-    CartPage.proceedToCheckout(); // Use Page Object method
+    CartPage.proceedToCheckout();
 });
 
 And('I enter the order info', () => {
-    CheckoutPage.fillOrderInfo("Ronad", "Ecuador", "Gye", "012456789", "January", "2024");
+    cy.fixture("client_info").then((client) => {
+        CheckoutPage.fillOrderInfo(client.name, client.country, client.city, client.creditCart, client.month, client.year);
+    })
 });
 
 And('I confirm the order', () => {

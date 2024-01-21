@@ -11,6 +11,14 @@ class HomePage {
       return cy.get('.list-group a:not(:first-child)');
     }
 
+    get product_list() {
+      return cy.get('#tbodyid > div');
+    }
+
+    getProductTitle(productName) {
+      return this.product_list.contains('h4.card-title', productName);
+    }
+
     clickPreviousCarouselButton() {
         this.carousel.find('.carousel-control-prev').click();
       }
@@ -28,16 +36,22 @@ class HomePage {
     }
 
     selectProduct(productName){
-      cy.contains(productName).click();
+      this.getProductTitle(productName).contains("a").click();
+    }
+
+    selectRandomCategory(){
+      cy.fixture("categories").as("categories");
+      cy.get("@categories").then((data) => {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        this.selectCategory(data[randomIndex].name);
+      });
     }
 
     selectRandomProduct(){
-      cy.get('#tbodyid > div').then(($elements) => {
+      this.product_list.then(($elements) => {
         const randomIndex = Math.floor(Math.random() * $elements.length);
-        const randomElement = $elements.get(randomIndex);
-        cy.wrap(randomElement).click();
+        cy.wrap($elements).eq(randomIndex).find('h4.card-title').find("a").click();
       });
-      
     }
 
   }

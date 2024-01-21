@@ -2,7 +2,7 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 import BasePage from '../../support/pages/base_page';
 import HomePage from '../../support/pages/home_page';
 
-Given('I am on the home page', () => {
+Given('I visit the DemoBlaze website', () => {
   BasePage.visit();
 });
 
@@ -40,7 +40,7 @@ Then('the carousel is displayed', () => {
   HomePage.carousel.should('be.visible'); // Espera a que el carrusel sea visible
 });
 
-Then('the next slide is displayed', () => {
+And('the next slide is displayed', () => {
   const currentSlideBefore = HomePage.getCurrentSlide();
   cy.wait(5000); // Adjust wait time based on carousel rotation speed
   const currentSlideAfter = HomePage.getCurrentSlide();
