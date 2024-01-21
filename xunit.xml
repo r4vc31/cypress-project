@@ -1,0 +1,9 @@
+<testsuite name="Mocha Tests" tests="7" failures="0" errors="0" skipped="0" timestamp="Sun, 21 Jan 2024 14:35:01 GMT" time="40.071">
+<testcase classname="Shopping Functionality on DemoBlaze" name="User selects a category and verifies category content (example #1)" time="4.415"/>
+<testcase classname="Shopping Functionality on DemoBlaze" name="User selects a category and verifies category content (example #2)" time="3.248"/>
+<testcase classname="Shopping Functionality on DemoBlaze" name="User selects a category and verifies category content (example #3)" time="3.839"/>
+<testcase classname="Shopping Functionality on DemoBlaze" name="User selects a product and navigates to its page" time="4.951"/>
+<testcase classname="Shopping Functionality on DemoBlaze" name="User adds a product to the cart and verifies cart contents" time="6.607"/>
+<testcase classname="Shopping Functionality on DemoBlaze" name="User removes an item from the cart" time="7.527"/>
+<testcase classname="Shopping Functionality on DemoBlaze" name="User completes a purchase" time="8.947"/>
+</testsuite>

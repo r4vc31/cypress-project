@@ -1,0 +1,208 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Featured Items Carousel",
+    "line": 2,
+    "id": "featured-items-carousel",
+    "tags": [
+      {
+        "name": "@regression",
+        "line": 1
+      },
+      {
+        "name": "@smoke",
+        "line": 1
+      },
+      {
+        "name": "@featured-items",
+        "line": 1
+      }
+    ],
+    "uri": "featured_items_carousel.feature",
+    "elements": [
+      {
+        "id": "featured-items-carousel;user-can-navigate-to-the-next-slide",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "User can navigate to the next slide",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 1
+          },
+          {
+            "name": "@featured-items",
+            "line": 1
+          },
+          {
+            "name": "@carousel",
+            "line": 7
+          },
+          {
+            "name": "@regression",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I visit the DemoBlaze website",
+            "result": {
+              "status": "passed",
+              "duration": 3170000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I click the next carousel button",
+            "result": {
+              "status": "passed",
+              "duration": 210000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the next slide is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 788000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "featured-items-carousel;user-can-navigate-to-the-previous-slide",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "User can navigate to the previous slide",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 1
+          },
+          {
+            "name": "@featured-items",
+            "line": 1
+          },
+          {
+            "name": "@carousel",
+            "line": 12
+          },
+          {
+            "name": "@regression",
+            "line": 12
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I visit the DemoBlaze website",
+            "result": {
+              "status": "passed",
+              "duration": 611000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I click the previous carousel button",
+            "result": {
+              "status": "passed",
+              "duration": 130000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the previous slide is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 766000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "featured-items-carousel;carousel-auto-rotates-items",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Carousel auto-rotates items",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 1
+          },
+          {
+            "name": "@featured-items",
+            "line": 1
+          },
+          {
+            "name": "@carousel",
+            "line": 17
+          },
+          {
+            "name": "@smoke",
+            "line": 17
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I visit the DemoBlaze website",
+            "result": {
+              "status": "passed",
+              "duration": 480000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "the carousel is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "the next slide is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 155000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

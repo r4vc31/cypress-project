@@ -1,0 +1,726 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Shopping Functionality on DemoBlaze",
+    "line": 2,
+    "id": "shopping-functionality-on-demoblaze",
+    "tags": [
+      {
+        "name": "@shopping-cart",
+        "line": 1
+      },
+      {
+        "name": "@regression",
+        "line": 1
+      }
+    ],
+    "uri": "shopping_functionality.feature",
+    "elements": [
+      {
+        "id": "shopping-functionality-on-demoblaze;user-selects-a-category-and-verifies-category-content",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "User selects a category and verifies category content",
+        "tags": [
+          {
+            "name": "@shopping-cart",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@category-selection",
+            "line": 7
+          },
+          {
+            "name": "@smoke",
+            "line": 7
+          },
+          {
+            "name": "@sanity",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I visit the DemoBlaze website",
+            "result": {
+              "status": "passed",
+              "duration": 1490000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I select the \"Phones\" category",
+            "result": {
+              "status": "passed",
+              "duration": 2827000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the product list is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 95000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "the product \"Samsung galaxy s6\" is present",
+            "result": {
+              "status": "passed",
+              "duration": 63000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "shopping-functionality-on-demoblaze;user-selects-a-category-and-verifies-category-content",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "User selects a category and verifies category content",
+        "tags": [
+          {
+            "name": "@shopping-cart",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@category-selection",
+            "line": 7
+          },
+          {
+            "name": "@smoke",
+            "line": 7
+          },
+          {
+            "name": "@sanity",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I visit the DemoBlaze website",
+            "result": {
+              "status": "passed",
+              "duration": 551000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I select the \"Laptops\" category",
+            "result": {
+              "status": "passed",
+              "duration": 2618000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the product list is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 73000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "the product \"Sony vaio i7\" is present",
+            "result": {
+              "status": "passed",
+              "duration": 73000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "shopping-functionality-on-demoblaze;user-selects-a-category-and-verifies-category-content",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "User selects a category and verifies category content",
+        "tags": [
+          {
+            "name": "@shopping-cart",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@category-selection",
+            "line": 7
+          },
+          {
+            "name": "@smoke",
+            "line": 7
+          },
+          {
+            "name": "@sanity",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I visit the DemoBlaze website",
+            "result": {
+              "status": "passed",
+              "duration": 1219000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I select the \"Monitors\" category",
+            "result": {
+              "status": "passed",
+              "duration": 2610000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the product list is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "the product \"ASUS Full HD\" is present",
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "shopping-functionality-on-demoblaze;user-selects-a-product-and-navigates-to-its-page",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "User selects a product and navigates to its page",
+        "tags": [
+          {
+            "name": "@shopping-cart",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@product-selection",
+            "line": 18
+          },
+          {
+            "name": "@smoke",
+            "line": 18
+          },
+          {
+            "name": "@sanity",
+            "line": 18
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I visit the DemoBlaze website",
+            "result": {
+              "status": "passed",
+              "duration": 625000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I select the \"Laptops\" category",
+            "result": {
+              "status": "passed",
+              "duration": 2611000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "the product list is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 81000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I select the \"Sony vaio i5\" product",
+            "result": {
+              "status": "passed",
+              "duration": 938000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "the product page is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 746000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "shopping-functionality-on-demoblaze;user-adds-a-product-to-the-cart-and-verifies-cart-contents",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "User adds a product to the cart and verifies cart contents",
+        "tags": [
+          {
+            "name": "@shopping-cart",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@cart-interactions",
+            "line": 25
+          },
+          {
+            "name": "@regression",
+            "line": 25
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I visit the DemoBlaze website",
+            "result": {
+              "status": "passed",
+              "duration": 728000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I select a random category",
+            "result": {
+              "status": "passed",
+              "duration": 2649000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "the product list is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 43000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I select a random product",
+            "result": {
+              "status": "passed",
+              "duration": 651000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "the product page is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 470000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "I add the product to the cart",
+            "result": {
+              "status": "passed",
+              "duration": 270000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I click the \"Cart\" link in the header",
+            "result": {
+              "status": "passed",
+              "duration": 666000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "the \"Cart\" page should be displayed",
+            "result": {
+              "status": "passed",
+              "duration": 51000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "the cart contains a product",
+            "result": {
+              "status": "passed",
+              "duration": 1179000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "shopping-functionality-on-demoblaze;user-removes-an-item-from-the-cart",
+        "keyword": "Scenario",
+        "line": 37,
+        "name": "User removes an item from the cart",
+        "tags": [
+          {
+            "name": "@shopping-cart",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@cart-interactions",
+            "line": 36
+          },
+          {
+            "name": "@regression",
+            "line": 36
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I visit the DemoBlaze website",
+            "result": {
+              "status": "passed",
+              "duration": 785000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I select a random category",
+            "result": {
+              "status": "passed",
+              "duration": 2630000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "the product list is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I select a random product",
+            "result": {
+              "status": "passed",
+              "duration": 798000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "the product page is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 343000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "I add the product to the cart",
+            "result": {
+              "status": "passed",
+              "duration": 208000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "I click the \"Cart\" link in the header",
+            "result": {
+              "status": "passed",
+              "duration": 594000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "the \"Cart\" page should be displayed",
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "the cart contains a product",
+            "result": {
+              "status": "passed",
+              "duration": 1097000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "I remove the added product",
+            "result": {
+              "status": "passed",
+              "duration": 213000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 47,
+            "name": "the cart is empty",
+            "result": {
+              "status": "passed",
+              "duration": 849000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "shopping-functionality-on-demoblaze;user-completes-a-purchase",
+        "keyword": "Scenario",
+        "line": 50,
+        "name": "User completes a purchase",
+        "tags": [
+          {
+            "name": "@shopping-cart",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@checkout",
+            "line": 49
+          },
+          {
+            "name": "@regression",
+            "line": 49
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I visit the DemoBlaze website",
+            "result": {
+              "status": "passed",
+              "duration": 814000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 51,
+            "name": "I select a random category",
+            "result": {
+              "status": "passed",
+              "duration": 2638000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "the product list is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 44000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "I select a random product",
+            "result": {
+              "status": "passed",
+              "duration": 747000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 54,
+            "name": "the product page is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 553000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "I add the product to the cart",
+            "result": {
+              "status": "passed",
+              "duration": 198000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 56,
+            "name": "I click the \"Cart\" link in the header",
+            "result": {
+              "status": "passed",
+              "duration": 490000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 57,
+            "name": "the \"Cart\" page should be displayed",
+            "result": {
+              "status": "passed",
+              "duration": 40000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "the cart contains a product",
+            "result": {
+              "status": "passed",
+              "duration": 905000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 59,
+            "name": "I proceed to checkout",
+            "result": {
+              "status": "passed",
+              "duration": 250000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "I enter the order info",
+            "result": {
+              "status": "passed",
+              "duration": 2021000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "I confirm the order",
+            "result": {
+              "status": "passed",
+              "duration": 240000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 62,
+            "name": "the order is successfully placed",
+            "result": {
+              "status": "passed",
+              "duration": 50000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
