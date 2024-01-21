@@ -22,6 +22,7 @@ This repository contains a Cypress-Cucumber framework designed to test the Demob
    - Node.js version 16 or higher
    - Cypress@9.7.0
    - Cucumber
+     - Open terminal and execute: `npm install --save-dev cypress@9.7.0 cypress-cucumber-preprocessor`
 
 2. **Installation:**
    - Clone the repository: `git clone https://github.com/r4vc31/cypress-project`
